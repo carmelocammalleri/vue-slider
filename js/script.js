@@ -49,14 +49,16 @@ createApp({
           this.counter = this.games.length -1;
         }
       },
-      clear (isStop){
-        if(isStop){
-          this.clearInterval(autoInterval());
-        }
-      },
       autoInterval (){
         setInterval(this.nextPrev , 3000);
       },
+
+      clear (isStop){
+        if(isStop){
+          this.clearInterval(this.autoInterval);
+        }
+        console.log(isStop);
+      }
     },
     mounted(){
       this.autoInterval();
