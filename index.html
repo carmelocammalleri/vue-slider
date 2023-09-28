@@ -36,8 +36,8 @@
           <!-- THUMB-NAIL -->
           <div class="thumb-nail">
             <img 
-            class="active" 
             v-for="(game, index) in games"
+            :class="(counter === index) ? 'active' : ''"
             :src="games[index].image" 
             :alt="games.title">
           </div>
