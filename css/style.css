@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgb(4, 77, 77);
+}
+
+.container {
+  width: 60%;
+  height: 50%;
+  margin: 0 auto;
+  background-color: cornflowerblue;
+}
+
+.slide {
+  height: 100%;
+  position: relative;
+}
+
+.image-wrap {
+  height: 100%;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hide {
+  display: none;
+}
+
+.btn {
+  position: absolute;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 90;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid white;
+}
+
+
+.arrow-up {
+  top: 15px;
+  right: 10%;
+  transform: translateX(50%);
+}
+
+.arrow-down {
+  bottom: 15px;
+  right: 10%;
+  transform: translateX(50%);
+}
+
+.thumb-img {
+  width: 100%;
+  height: 20%;
+}
+
+.thumb-img .active {
+  border: 1.5px solid white;
+  opacity: 1;
+}
+
+.thumb {
+  width: 20%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.816);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .4;
+}
+
+
+#info {
+  position: absolute;
+  width: 79%;
+  color: white;
+  text-align: end;
+  bottom: 15px;
+}
+
+.info .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
