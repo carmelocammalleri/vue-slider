@@ -31,13 +31,13 @@
               <span>{{games[counter].text}}</span>
             </div>
           </div>
-
           
           <!-- THUMB-NAIL -->
           <div class="thumb-nail">
             <img 
             v-for="(game, index) in games"
             :class="(counter === index) ? 'active' : ''"
+            @click="counter = index"
             :src="games[index].image" 
             :alt="games.title">
           </div>
