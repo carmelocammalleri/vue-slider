@@ -38,9 +38,9 @@ createApp({
       nextPrev(isNext){
         
         if(isNext){
-          this.counter++;
-        }else{
           this.counter--;
+        }else{
+          this.counter++;
         }
 
         if(this.counter === this.games.length){
@@ -48,6 +48,18 @@ createApp({
         } else if (this.counter < 0){
           this.counter = this.games.length -1;
         }
-      }
+      },
+      clear (isStop){
+        if(isStop){
+          this.clearInterval(autoInterval());
+        }
+      },
+      autoInterval (){
+        setInterval(this.nextPrev , 3000);
+      },
+    },
+    mounted(){
+      this.autoInterval();
     }
+
 }).mount('#app')

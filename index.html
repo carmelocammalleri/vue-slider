@@ -20,10 +20,12 @@
       <div class="container">
 
           <!-- IMAGE-SLIDE -->
-          <div class="image-wrap">
+          <div 
+          class="image-wrap">
             <img 
             :src="games[counter].image" 
-            alt="spidy">
+            alt="spidy"
+            @mouseover="clear(true)">
 
               <!-- INFO -->
             <div id="info">
@@ -43,8 +45,8 @@
           </div>
           
           <!-- BUTTONS -->
-          <div @click="nextPrev(false)" class="btn arrow-up">&UpArrow;</div>
-          <div @click="nextPrev(true)" class="btn arrow-down">&downarrow;</div>
+          <div @click="nextPrev(true)" class="btn arrow-up">&UpArrow;</div>
+          <div @click="nextPrev(false)" class="btn arrow-down">&downarrow;</div>
         </div>
       </div>
     </div>
