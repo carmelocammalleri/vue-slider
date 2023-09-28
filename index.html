@@ -22,17 +22,17 @@
           <!-- IMAGE-SLIDE -->
           <div class="image-wrap">
             <img 
-            :src="games.image" 
+            :src="games[counter].image" 
             alt="spidy">
           </div>
 
           <!-- THUMB-NAIL -->
           <div class="thumb-nail">
-            <img class="active" src="./img/01.webp" alt="spidy">
-            <img src="./img/01.webp" alt="spidy">
-            <img src="./img/01.webp" alt="spidy">
-            <img src="./img/01.webp" alt="spidy">
-            <img src="./img/01.webp" alt="spidy">
+            <img 
+            class="active" 
+            v-for="(game, index) in games"
+            :src="games[index].image" 
+            :alt="games.title">
           </div>
           
           <!-- BUTTONS -->
