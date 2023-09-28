@@ -33,5 +33,21 @@ createApp({
          
         counter: 0
     }
-  }
+  },
+    methods:{
+      nextPrev(isNext){
+        
+        if(isNext){
+          this.counter++;
+        }else{
+          this.counter--;
+        }
+
+        if(this.counter === this.games.length){
+          this.counter = 0;
+        } else if (this.counter < 0){
+          this.counter = this.games.length -1;
+        }
+      }
+    }
 }).mount('#app')
