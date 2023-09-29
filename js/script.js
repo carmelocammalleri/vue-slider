@@ -31,7 +31,8 @@ createApp({
         }
         ],
          
-        counter: 0
+        counter: 0,
+        autoslider: false
     }
   },
     methods:{
@@ -50,14 +51,11 @@ createApp({
         }
       },
       autoInterval (){
-        setInterval(this.nextPrev , 3000);
-      },
-
-      clear (isStop){
-        if(isStop){
-          this.clearInterval(this.autoInterval);
-        }
-        console.log(isStop);
+        setInterval( () => {
+          if(this.autoslider === true){
+            this.nextPrev(false)
+          }
+        }, 3000);
       }
     },
     mounted(){

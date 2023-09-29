@@ -17,15 +17,16 @@
 
   <div id="app">
     <div class="main-wrapper">
-      <div class="container">
+      <div class="container"
+      @mouseenter="autoslider = false"
+      @mouseleave="autoslider = true">
 
           <!-- IMAGE-SLIDE -->
           <div 
           class="image-wrap">
             <img 
             :src="games[counter].image" 
-            alt="spidy"
-            @mouseover="clear(false)">
+            alt="spidy">
 
               <!-- INFO -->
             <div id="info">
@@ -40,8 +41,8 @@
             v-for="(game, index) in games"
             :class="(counter === index) ? 'active' : ''"
             @click="counter = index"
-            :src="games[index].image" 
-            :alt="games.title">
+            :src="game.image" 
+            :alt="game.title">
           </div>
           
           <!-- BUTTONS -->
